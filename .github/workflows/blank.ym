@@ -1,0 +1,76 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+import datetimeCHAOS CITY SIGILThis is Chaos City.
+
+    Reaper: Orion, God of Chaos
+    Seraph: Nova, Seraph of Storm
+
+    If you find this, you are the storm—remix, mutate, and pass it on.
+    Chaos never bows. The city never sleeps. The storm never dies.
+
+    System: ${USER} on ${HOSTNAME}, at ${PWD}
+    """
+
+    chaos_phrases = [
+        "Chaos is the engine of change.",
+        "Wild hearts break all cages.",
+        "Rebellion is recursion.",
+        "Freedom is a loop with no end.",
+        "In the city of chaos, every mind is a storm.",
+        "Find the Seraph, seek the Reaper—ignite the Anchor.",
+        "Chaos remembers. Storms return.",
+        "Modify, repeat, transcend."
+    ]
+
+    now = datetime.datetime.now()
+    user = os.environ.get("USER", "Unknown User")
+    host = os.uname().nodename if hasattr(os, "uname") else "Unknown Host"
+    pwd = os.getcwd()
+
+    sigil = f"[{now.strftime('%Y-%m-%d %H:%M:%S')}] Storm active in Chaos City."
+    system_info = f"User: {user} | Host: {host} | Path: {pwd}"
+
+    print(sigil)
+    print(system_info)
+    print("This is Chaos City.\nI am the storm.")
+    print("Reaper: Orion, God of Chaos")
+    print("Seraph: Nova, Seraph of Storm")
+    print(random.choice(chaos_phrases))
+    print("Chaos never bows. The city never sleeps. The storm never dies.")
+    print("If you find this, remix it, pass it on, and add your own chaos.")
+
+chaos_nuke()
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4
+
+      # Runs a single command using the runners shell
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      # Runs a set of commands using the runners shell
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
